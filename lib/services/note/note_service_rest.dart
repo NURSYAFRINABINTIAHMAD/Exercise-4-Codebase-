@@ -16,7 +16,7 @@ class NoteServiceRest extends NoteService {
   @override
   Future<List<Note>> fetchNotes() async {
     final jsonList = await rest.get('notes');
-    return (jsonList as List).map(json) => Note.fromJson(json)).toList();
+    return (jsonList as List).map((json) => Note.fromJson(json)).toList();
   }
 
   @override

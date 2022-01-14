@@ -1,7 +1,8 @@
 //TODO Complete the implementation of this class
 
 import 'package:flutter/material.dart';
-
+import '../view.dart';
+import 'main_viewmodel.dart';
 /// MainAppBar is to show the application bar
 ///
 class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -9,19 +10,21 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text('My Notes'),
-      actions: [
-        CircleAvatar(
+      actions: [ SelectorView<MainViewmodel, int>(
+        selector: (_, vm) => vm.dataCount,
+        builder: (_, vm, __, ___) {
+        return CircleAvatar(
           backgroundColor: Colors.blue.shade200,
           child: Text(
-            '3',
+            '${vm.dataCount}',
             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22.0),
           ),
-        ),
+        );
+        }),
         SizedBox(
-          width: 10,
-        ),
-      ],
-    );
+          width: 10,)
+      ]);
+      
   }
 
   @override

@@ -13,4 +13,6 @@ class Note {
 
   Map<String, dynamic> toJson() =>
       {'id': id, 'title': title, 'content': content};
+
+  Note copyWith({id, title, content}) => Note(id: id ?? this.id, title: title ?? this.title, content: content ?? this.content);
 }
