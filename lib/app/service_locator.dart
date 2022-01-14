@@ -13,8 +13,8 @@ GetIt locator = GetIt.instance;
 
 void initializeServiceLocator() {
   // Services
-  // locator.registerLazySingleton<RestService>(
-  //     () => RestService(baseUrl: 'http://192.168.0.5:3000'));
+  locator.registerLazySingleton<RestService>(
+      () => RestService(baseUrl: 'http://192.168.43.19:3000'));
 
   //TODO To switch between service, comment out the line below accordingly
   locator.registerLazySingleton<NoteService>(() => NoteServiceMock());
