@@ -1,5 +1,9 @@
-//? The main file (main.dart) is fully given. Do nothing here.
 
+//Name                      Time starts    Time ends    place
+//Nursyafrina Binti Ahmad   11.55pm                     Segamat, Johor
+//Srivani A/P Murugan       11.55pm                     Klang, Selangor                           
+
+//? The main file (main.dart) is fully given. Do nothing here.
 import 'package:flutter/material.dart';
 
 import 'app/service_locator.dart';
@@ -18,4 +22,3 @@ void main() {
     // home: NoteScreen(),
   ));
 }
-///
